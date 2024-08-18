@@ -1,0 +1,18 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/DialoguePlugin/Editor/BehaviourTreeEditor.uss?fileID=7433441132597879392&amp;guid=2f7209d6517373f4ca19728ecbb98312&amp;type=3#BehaviourTreeEditor" />
+    <SplitView fixed-pane-initial-dimension="300">
+        <ui:VisualElement name="right-panel" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+            <ui:Label tabindex="-1" text="Inspector" display-tooltip-when-elided="true" style="background-color: rgb(37, 37, 37);" />
+            <InspectorView style="flex-grow: 1; flex-shrink: 1; height: 400px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="left-panel" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0);">
+            <BehaviourTreeView focusable="true" style="flex-grow: 1; opacity: 1;">
+                <ui:Label tabindex="-1" text="Graph" display-tooltip-when-elided="true" style="background-color: rgb(37, 37, 37);" />
+                <uie:Toolbar>
+                    <uie:ToolbarButton text="Recenter" display-tooltip-when-elided="true" name="B_Recenter" />
+                    <uie:ToolbarButton text="Recenter2" display-tooltip-when-elided="true" name="B_Recenter2" />
+                </uie:Toolbar>
+            </BehaviourTreeView>
+        </ui:VisualElement>
+    </SplitView>
+</ui:UXML>

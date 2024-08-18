@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-970879009704489785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18d131ea70b396c41b100cead1e565d6, type: 3}
+  m_Name: SentenceNode
+  m_EditorClassIdentifier: 
+  guid: 6804707912da57641933eadb33be0244
+  position: {x: -201.08801, y: -129.6}
+  child: {fileID: 0}
+  sentence:
+    text: Hi!
+    speaker: {fileID: 0}
+    isLeft: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3efe6d3a7bfad14ca8b6ee0204c3fd3, type: 3}
+  m_Name: New Behaviour Tree
+  m_EditorClassIdentifier: 
+  state: 0
+  rootNode: {fileID: 404248582752486239}
+  nodes:
+  - {fileID: 404248582752486239}
+  - {fileID: -970879009704489785}
+--- !u!114 &404248582752486239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb24e830fe6b14e4d95be489a99501ee, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  guid: 340731a1b86fec44a90ee45a84f27bc2
+  position: {x: 154, y: -206.4}
+  child: {fileID: 0}
