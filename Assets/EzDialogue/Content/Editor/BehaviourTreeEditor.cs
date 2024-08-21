@@ -17,21 +17,26 @@ namespace GMDialogue.EditorUI
             wnd.titleContent = new GUIContent("BehaviourTreeEditor"); // sets the name of the window
         }
 
-        public void CreateGUI()
+        private void CreateGUI()
         {
-            // Build a clone of BehaviourTreeEditor.uxml in rootVisualElement
-            var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/DialoguePlugin/Editor/BehaviourTreeEditor.uxml");
-            visualTree.CloneTree(rootVisualElement);
+            Debug.Log("Create GUI");
 
+            // Build a clone of BehaviourTreeEditor.uxml in rootVisualElement
+            var visualTree = AssetDatabase.LoadAssetAtPath<VisualTreeAsset>("Assets/EzDialogue/Content/Editor/BehaviourTreeEditor.uxml");
+            Debug.Log("visualTree: " + visualTree);
+            visualTree.CloneTree(rootVisualElement);
 
             // Add BehaviourTreeEditor.uss as a style for the root
             // The style will be applied to the VisualElement and all of its children.
-            var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/DialoguePlugin/Editor/BehaviourTreeEditor.uss");
+            var styleSheet = AssetDatabase.LoadAssetAtPath<StyleSheet>("Assets/EzDialogue/Content/Editor/BehaviourTreeEditor.uss");
+            Debug.Log("styleSheet: " + styleSheet);
             rootVisualElement.styleSheets.Add(styleSheet);
 
             treeView = rootVisualElement.Q<BehaviourTreeView>();
+            Debug.Log("treeView: " +  treeView);
             treeView.Init();
             inspectorView = rootVisualElement.Q<InspectorView>();
+            Debug.Log("inspectorView: " + inspectorView);
 
             OnSelectionChange();
         }
